@@ -1,0 +1,38 @@
+ProductName,Description,Price,Stock,CategoryID,SupplierID
+Chew Toy,Durable rubber toy for dogs.,10.99,150,1,3
+Cat Scratcher,Wooden scratching post for cats.,25.5,100,1,9
+Fetch Ball,High-bounce ball for active dogs.,12.0,200,1,8
+Interactive Puzzle,Brain-training toy for pets.,35.0,75,1,16
+Leash,Durable nylon leash for dogs.,15.99,250,2,1
+Collar,Adjustable collar for pets.,9.5,300,2,6
+Pet Bed,Soft and cozy bed for pets.,45.0,120,2,13
+Dry Dog Food,Premium dry food for adult dogs.,60.0,500,3,21
+Cat Wet Food,High-quality wet food for cats.,30.0,350,3,2
+Small Pet Mix,Nutritional mix for small pets.,20.0,400,3,18
+Shampoo,Gentle shampoo for sensitive skin.,12.99,180,4,4
+Brush,Grooming brush for all coat types.,8.99,250,4,4
+Vitamins,Multivitamin supplement for pets.,25.0,100,5,14
+Tick Repellent,Spray to protect pets from ticks.,18.0,200,5,5
+Training Whistle,High-frequency whistle for dogs.,9.99,300,6,7
+Clicker,Training clicker for behavior shaping.,5.5,400,6,7
+Dog House,Weatherproof dog house.,150.0,50,7,12
+Cat Tower,Multi-level cat play tower.,200.0,30,7,19
+Squeaky Plush Toy,Soft plush toy with built-in squeaker for dogs.,14.99,120,1,15
+Catnip Mouse Toy,Mouse-shaped toy infused with catnip.,8.0,220,1,17
+Rope Tug Toy,Durable rope for tug games with dogs.,11.5,180,1,10
+Laser Pointer,Interactive laser toy for cats.,9.0,250,1,19
+Pet Carrier,Portable pet carrier for travel.,75.0,90,2,12
+Raincoat for Dogs,Waterproof coat for rainy walks.,30.0,70,2,8
+Cooling Mat,Cooling mat for hot weather comfort.,50.0,60,2,13
+Grain-Free Dog Food,Healthy grain-free formula.,70.0,450,3,21
+Freeze-Dried Treats,Natural freeze-dried treats for pets.,25.0,300,3,9
+Dental Chews,Chews that help clean pets’ teeth.,15.5,200,3,3
+Nail Clippers,Pet nail clippers for safe trimming.,10.99,150,4,4
+Ear Cleaner,Gentle ear cleaning solution.,12.5,200,4,14
+Joint Care Supplement,Supplement to support healthy joints.,40.0,100,5,14
+Eye Drops for Pets,Moisturizing eye drops for pets.,18.99,150,5,5
+Agility Tunnel,Training tunnel for active dogs.,120.0,40,6,11
+Target Stick,Training tool for behavior shaping.,15.0,70,6,7
+Bird Cage,Spacious cage for birds.,180.0,50,7,20
+Aquarium Starter Kit,Complete kit for aquarium beginners.,220.0,20,7,18
+Reptile Habitat,Fully equipped habitat for reptiles.,300.0,10,7,22
