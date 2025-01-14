@@ -1,8 +1,8 @@
-CategoryName
-Toys
-Accessories
-Food
-Grooming
-Health
-Training
-Housing
+CategoryID,CategoryName
+1,Toys
+2,Accessories
+3,Food
+4,Grooming
+5,Health
+6,Training
+7,Housing
