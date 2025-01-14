@@ -98,6 +98,26 @@ VALUES
     ('Riley Silver', '1515 Pawpath, Furtown', '+7893216540', 'riley.silver@example.com', '2021-05-25'),
     ('Sophia Black', '1616 Chew Blvd, Barkcity', '+8529637410', 'sophia.black@example.com', '2022-08-30'),
     ('Thomas Cyan', '1717 Catnip Ln, Meowland', '+9514567890', 'thomas.cyan@example.com', '2020-03-10');
+    ('Uma Teal', '1818 Tail Ave, Dogtown', '+9517896540', 'uma.teal@example.com', '2023-11-25'),
+    ('Victor Lime', '1919 Pawpath, Petworld', '+7894561230', 'victor.lime@example.com', '2019-10-05'),
+    ('Wendy Gold', '2020 Meow Blvd, Furtown', '+7418529630', 'wendy.gold@example.com', '2018-07-19'),
+    ('Xavier Jade', '2121 Scratch Rd, Barkville', '+9632587410', 'xavier.jade@example.com', '2024-01-15'),
+    ('Yara Silver', '2222 Purr St, Catville', '+9513574860', 'yara.silver@example.com', '2020-05-03'),
+    ('Zach Crimson', '2323 Barking Blvd, Dogland', '+1238524560', 'zach.crimson@example.com', '2019-04-14'),
+    ('Abby Copper', '2424 Catnip Dr, Meowcity', '+7413692580', 'abby.copper@example.com', '2022-02-28'),
+    ('Ben Hazel', '2525 Chew Blvd, Petland', '+1593578520', 'ben.hazel@example.com', '2023-10-10'),
+    ('Cathy Indigo', '2626 Purring Path, Furtown', '+7891234560', 'cathy.indigo@example.com', '2017-12-31'),
+    ('Derek Blue', '2727 Meow Ln, Animalcity', '+4569873210', 'derek.blue@example.com', '2021-06-05'),
+    ('Elena Mauve', '2828 Tail Rd, Petville', '+9631472580', 'elena.mauve@example.com', '2019-09-22'),
+    ('Frank Red', '2929 Pawpath, Barktown', '+3579514560', 'frank.red@example.com', '2022-01-17'),
+    ('Grace Mint', '3030 Scratch Blvd, Catland', '+7893214560', 'grace.mint@example.com', '2024-08-11'),
+    ('Hector Olive', '3131 Chew Dr, Dogtown', '+8526549510', 'hector.olive@example.com', '2018-03-04'),
+    ('Isla Cyan', '3232 Purring Path, Furtown', '+1594863570', 'isla.cyan@example.com', '2020-11-08'),
+    ('Jake Navy', '3333 Tail Blvd, Petworld', '+7531594860', 'jake.navy@example.com', '2021-07-26'),
+    ('Kelly Orange', '3434 Barking Rd, Dogtown', '+9518526540', 'kelly.orange@example.com', '2017-04-18'),
+    ('Liam Purple', '3535 Catnip Dr, Meowtown', '+3574561590', 'liam.purple@example.com', '2019-05-06'),
+    ('Mila Green', '3636 Meow Path, Petcity', '+6549513570', 'mila.green@example.com', '2023-02-21'),
+    ('Nate Violet', '3737 Purr Blvd, Catland', '+9513571590', 'nate.violet@example.com', '2022-06-14');
 INSERT INTO "Brands" ("BrandName", "Description")
 VALUES
     ('PetCo', 'Affordable pet products for all kinds of animals.'),
