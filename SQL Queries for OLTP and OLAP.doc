@@ -1,0 +1,69 @@
+SQL Queries for OLTP and OLAP
+
+OLTP Queries
+
+1. Orders within a specific period:
+
+SELECT
+    o."OrderID",
+    o."OrderDate",
+    u."FullName" AS CustomerName,
+    SUM(oi."Quantity" * oi."Price") AS TotalOrderValue,
+    o."Status"
+FROM "Orders" o
+JOIN "Users" u ON o."UserID" = u."UserID"
+JOIN "Order_Items" oi ON o."OrderID" = oi."OrderID"
+WHERE o."OrderDate" BETWEEN '2024-01-01' AND '2024-12-31'
+GROUP BY o."OrderID", o."OrderDate", u."FullName", o."Status"
+ORDER BY o."OrderDate" DESC;
+
+Description: This query retrieves orders made between `2024-01-01` and `2024-12-31`, 
+including the customer name, total order value, and order status. 
+It aggregates data from `Orders`, `Users`, and `Order_Items` tables.
+
+2. Top 5 products by quantity sold:
+
+SELECT
+    p."ProductName",
+    SUM(oi."Quantity") AS TotalQuantity
+FROM "Order_Items" oi
+JOIN "Products" p ON oi."ProductID" = p."ProductID"
+GROUP BY p."ProductName"
+ORDER BY TotalQuantity DESC
+LIMIT 5;
+
+Description: This query identifies the top 5 products based on total quantity sold. 
+It joins `Order_Items` and `Products` tables to get product names and their respective sales.
+
+
+
+OLAP Queries
+
+1. Revenue by month:
+
+SELECT
+    dt."year",
+    dt."month",
+    SUM(fs."totalrevenue") AS TotalRevenue
+FROM Fact_Sales fs
+JOIN dim_time dt ON fs."dateid" = dt."dateid"
+GROUP BY dt."year", dt."month"
+ORDER BY dt."year", dt."month";
+
+Description: This query aggregates total revenue for each year and month. 
+It joins `Fact_Sales` and `dim_time` tables to utilize dimensional data for grouping and aggregation.
+
+2. Total sales by product category:
+
+SELECT
+    dp."category",
+    SUM(fs."quantitysold") AS TotalQuantitySold,
+    SUM(fs."totalrevenue") AS TotalRevenue
+FROM Fact_Sales fs
+JOIN dim_product dp ON fs."productid" = dp."productid"
+GROUP BY dp."category"
+ORDER BY TotalQuantitySold DESC;
+
+Description: This query summarizes total quantity sold and revenue by product category. 
+It joins `Fact_Sales` with `dim_product` for detailed product category data.
+

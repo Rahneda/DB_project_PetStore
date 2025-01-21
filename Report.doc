@@ -1,0 +1,127 @@
+Database Project Report: Pet Store 
+
+
+
+1. Objective
+
+The primary objective of this project was to design, implement, and analyze a database system that supports both OLTP (Online Transaction Processing) 
+and OLAP (Online Analytical Processing). The database supports a fictional Pet Store and includes functionality for managing transactional data as well as 
+generating insights through reporting and visualization tools.
+
+
+2. Work Completed
+
+2.1 OLTP System
+
+Logical Design:
+
+  - An ER-diagram was created to design the database schema.
+  - Tables were normalized to 3NF to ensure efficient storage and eliminate redundancy.
+
+Tables Created:
+
+  - `Future ImprovementsUsers`, `Categories`, `Brands`, `Products`, `Orders`, `Order_Items`, `Payments`, `Shippers`.
+  - Each table includes appropriate primary and foreign keys to maintain referential integrity.
+
+Data Population:
+
+    Realistic test data prepared:
+    - Users: 20 records.
+    - Categories: 7 records.
+    - Brands: 20 records.
+    - Products: 18 records.
+    - Orders: 45 records.
+    - Order\_Items: 50 records.
+    - Payments: 50 records.
+    - Shippers: 4 records.
+  - Tables were populated with test data spanning over 5+ years.
+  - CSV files were prepared for each table, including a combined CSV file for certain related tables.
+
+SQL Queries for OLTP:
+
+  - Two queries were developed and tested:
+    1. Retrieve orders within a specific period: Lists all orders with details for a given date range.
+    2. Top 5 products by quantity sold: Retrieves the most popular products based on sales quantity.
+
+
+2.2 OLAP System
+
+Snowflake Schema Design:
+
+  - Fact tables:
+    - `Fact_Sales` (aggregates sales data).
+    - `Fact_Orders` (aggregates order data).
+  - Dimension tables:
+    - `Dim_Product` (product details with slowly changing dimensions).
+    - `Dim_Time` (date and time attributes).
+    - `Dim_Customer` (customer details).
+
+ETL Process:
+
+  - SQL scripts were created to transfer and transform data from OLTP tables into the OLAP schema.
+  - `SCD Type 2` was implemented in the `Dim_Product` table to track changes over time.
+
+SQL Queries for OLAP:
+
+  - Two queries were developed and tested:
+    1. Revenue by month: Aggregates total revenue for each year and month.
+    2. Total sales by product category: Summarizes quantity sold and revenue for each category.
+
+
+2.3 Data Preparation for Power BI
+
+Combined Data Table:
+  - A combined table `linked_all_data` was created in PostgreSQL by joining all relevant fact and dimension tables.
+  - This table included fields such as `saleyear`, `salemonth`, `category`, `quantitysold`, `totalrevenue`, `customername`, and `totalordervalue`.
+  - The table was exported as a CSV file and imported into Power BI.
+
+
+2.4 Data Visualization in Power BI
+
+Visualizations Created:
+
+  1. Line Chart: Trends in total revenue by year and month.
+  2. Bar Chart: Total quantity sold by product category.
+  3. Table: Detailed customer information with total spending.
+  4. Additional Bar Chart: Total quantity sold by category.
+  5. Cards: Displaying key metrics:
+     - Total Revenue.
+     - Total Items Sold.
+     - Total Quantity Sold.
+
+Interactivity:
+
+  - Slicers were added for filtering by year (`saleyear`) and product category (`category`).
+  - All visuals were interactive and responsive to slicer inputs.
+
+
+3. Tools and Technologies Used
+
+- ER-Diagram Design: DrawSQL
+- Database Management: PostgreSQL
+- Database Management: PostgreSQL
+- ETL and Data Preparation: SQL Scripts
+- Visualization: Power BI (Web Version)
+- Project Documentation: Microsoft Word
+
+
+4. Challenges and Solutions
+
+Data Export Permissions:
+
+  - Resolved by using the `\COPY` command in PostgreSQL or exporting directly via pgAdmin.
+
+Case Sensitivity in PostgreSQL:
+
+  - Ensured all table and column names were consistently referenced with correct casing.
+
+Limited Features in Power BI Web Version:
+
+  - Replaced unsupported map visualizations with tables and bar charts to maintain insights.
+
+
+5. Conclusion
+
+The project successfully implemented a robust database system supporting both OLTP and OLAP workflows. 
+The Power BI report provided insightful visualizations, enabling analysis of sales trends, customer spending, and product performance. 
+This end-to-end solution demonstrates the effectiveness of integrating transactional and analytical systems for decision-making.
